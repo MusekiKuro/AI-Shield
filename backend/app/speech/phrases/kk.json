@@ -1,0 +1,18 @@
+[
+  {"id":"kk-001","language":"kk","scheme":"bank_security","phrase":"Ақшаңызды қауіпсіз шотқа аударыңыз","feature":"safe_account","context":"request"},
+  {"id":"kk-002","language":"kk","scheme":"bank_security","phrase":"Мен банк қауіпсіздік бөлімінен хабарласып тұрмын","feature":"impersonation","context":"request"},
+  {"id":"kk-003","language":"kk","scheme":"bank_security","phrase":"Ешкімнің нұсқауымен ақшаңызды қауіпсіз шотқа аудармаңыз","feature":"safe_account","context":"warning"},
+  {"id":"kk-004","language":"kk","scheme":"bank_security","phrase":"Ол өзін банк қауіпсіздік бөлімінің қызметкерімін деп таныстырды","feature":"impersonation","context":"quotation"},
+  {"id":"kk-005","language":"kk","scheme":"relative_in_trouble","phrase":"Туысыңызға көмектесу үшін ақшаны дереу жіберіңіз","feature":"urgency","context":"request"},
+  {"id":"kk-006","language":"kk","scheme":"relative_in_trouble","phrase":"Бұл туралы туыстарыңызға айтпай тұрыңыз","feature":"secrecy","context":"request"},
+  {"id":"kk-007","language":"kk","scheme":"relative_in_trouble","phrase":"Туысыңыздың атынан ақша сұраса, алдымен өзіне хабарласыңыз","feature":"impersonation","context":"warning"},
+  {"id":"kk-008","language":"kk","scheme":"relative_in_trouble","phrase":"Ол маған бұл жайды ешкімге айтпауды сұрады","feature":"secrecy","context":"quotation"},
+  {"id":"kk-009","language":"kk","scheme":"investment","phrase":"Табысқа үлгеру үшін ақшаны дәл қазір салыңыз","feature":"urgency","context":"request"},
+  {"id":"kk-010","language":"kk","scheme":"investment","phrase":"Бұл инвестициялық ұсыныс туралы ешкімге айтпаңыз","feature":"secrecy","context":"request"},
+  {"id":"kk-011","language":"kk","scheme":"investment","phrase":"Тез инвестиция салуға қысым жасайтын ұсыныстан сақ болыңыз","feature":"urgency","context":"warning"},
+  {"id":"kk-012","language":"kk","scheme":"investment","phrase":"Ол инвестиция туралы ешкімге айтпауымды өтінді","feature":"secrecy","context":"quotation"},
+  {"id":"kk-013","language":"kk","scheme":"marketplace","phrase":"Тауарды алу үшін төлемді қазір жіберіңіз","feature":"urgency","context":"request"},
+  {"id":"kk-014","language":"kk","scheme":"marketplace","phrase":"Мен сауда алаңының қолдау қызметіненмін, төлемді растаңыз","feature":"impersonation","context":"request"},
+  {"id":"kk-015","language":"kk","scheme":"marketplace","phrase":"Өзін қолдау қызметкері деп таныстырған адамға сақ болыңыз","feature":"impersonation","context":"warning"},
+  {"id":"kk-016","language":"kk","scheme":"marketplace","phrase":"Сатушы төлемді дәл қазір жіберуді талап етті","feature":"urgency","context":"quotation"}
+]

@@ -1,0 +1,27 @@
+# Separate ML environment for the model PC; application dependencies live elsewhere.
+# Install these PyTorch wheels from the CUDA 12.8 index as described in README.md.
+torch==2.11.0
+torchvision==0.26.0
+torchaudio==2.11.0
+
+# Model server, audio input and HTTP clients.
+fastapi
+uvicorn[standard]
+python-multipart
+transformers
+accelerate
+numpy
+soundfile
+librosa
+sounddevice; sys_platform == "win32"
+requests
+httpx
+huggingface-hub
+jsonschema
+
+# Dataset preparation and training in WSL2 only.
+datasets; sys_platform == "linux"
+scikit-learn; sys_platform == "linux"
+peft; sys_platform == "linux"
+trl; sys_platform == "linux"
+unsloth; sys_platform == "linux"

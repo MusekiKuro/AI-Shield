@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ShieldClassifierResult",
+  "type": "object",
+  "properties": {
+    "scheme": {
+      "type": "string",
+      "enum": ["bank_security", "relative_in_trouble", "investment", "marketplace", "none"]
+    },
+    "active_request": { "type": "boolean" },
+    "urgency": { "type": "boolean" },
+    "secrecy": { "type": "boolean" },
+    "safe_account_request": { "type": "boolean" },
+    "evidence": {
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 3,
+      "items": { "type": "string", "minLength": 1, "maxLength": 120 }
+    }
+  },
+  "required": ["scheme", "active_request", "urgency", "secrecy", "safe_account_request", "evidence"],
+  "additionalProperties": false
+}

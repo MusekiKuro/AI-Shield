@@ -1,0 +1,20 @@
+/* C01 shell only. F01 owns styles/tokens.css and styles/base.css. */
+:root { font-family: system-ui, sans-serif; font-size: 18px; color: #172033; background: #F5F7FA; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.shell { max-width: 1120px; margin: 0 auto; padding: 24px; overflow-wrap: anywhere; }
+.shell-header { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center; }
+.shell-brand { color: #135E73; font-size: 1.6rem; font-weight: 750; text-decoration: none; }
+.shell-language { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.shell-language select, .shell button { font: inherit; padding: 8px 12px; border: 1px solid #9BA4B2; border-radius: 6px; background: #FFFFFF; color: inherit; }
+.shell-demo { border-left: 4px solid #135E73; padding: 12px 16px; background: #FFFFFF; }
+.shell-nav { display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 24px 0; border-bottom: 1px solid #D3D9E1; }
+.shell-nav a { padding: 12px 0; color: #135E73; text-underline-offset: 6px; }
+.shell-nav a[aria-current="page"] { color: #172033; font-weight: 700; text-decoration-thickness: 3px; }
+.shell-panel { background: #FFFFFF; padding: clamp(20px, 4vw, 40px); border: 1px solid #D3D9E1; border-radius: 12px; }
+.shell-panel h1 { margin-top: 0; font-size: 2rem; }
+.shell-panel h2 { font-size: 1.1rem; }
+.shell-panel p { max-width: 65ch; line-height: 1.6; }
+.shell-footer { padding: 24px 0; line-height: 1.6; }
+.shell :focus-visible { outline: 3px solid #135E73; outline-offset: 4px; }
+@media (max-width: 540px) { .shell { padding: 16px; } .shell-header { align-items: flex-start; flex-direction: column; } }

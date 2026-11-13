@@ -1,12 +1,42 @@
+# Secrets and local configuration
 .env
 .env.*
 !.env.example
 *.pem
 *.key
-__pycache__/
-*.py[cod]
+
+# Python / JavaScript artifacts
 .venv/
 venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
 node_modules/
-.DS_Store
+dist/
+.vite/
+*.tsbuildinfo
+.superpowers/
+
+# Runtime data, audio, checkpoints and training data
+*.db
+*.db-*
+*.sqlite*
+*.wav
+*.mp3
+*.webm
+*.ogg
+*.flac
+*.gguf
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.onnx
+data/training/
+ml/out/
+ml/models/
+models/
+logs/
 *.log
+.DS_Store
+Thumbs.db

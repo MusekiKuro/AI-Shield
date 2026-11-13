@@ -1,8 +1,8 @@
 # Состояние проекта
 
 - Дата: 12 ноября 2026.
-- Ветка: не определена; Git в папке не инициализирован. Есть только документация, программная реализация не начата.
-- Текущая цель: текстовый MVP с локальными моделями (Gemma 4 12B, Whisper turbo) вместо облачных; задачи раздаются агентам трёх уровней по docs/ARCHITECTURE.md.
-- Изменённые файлы 12 ноября: docs/ARCHITECTURE.md (новый); docs/superpowers/plans/2026-11-12-local-models.md (новый); docs/MVP_SCOPE.md; docs/superpowers/plans/2026-11-11-{mvp-implementation,complex-tasks,flash-tasks}.md; AGENTS.md; TASKS.md; PROJECT_STATE.md. Архив docs.zip пересобран 12 ноября.
-- Блокеры: для волны 0 нет. На ПК стоит Windows. Не подтверждены: доступность ПК в день защиты, качество моделей на казахском, требования организаторов к сдаче.
-- Следующий шаг: запустить волну 0 — C01 и M02 (L3), M01, M09 и казахские пакеты M04 (L2), M05 и русские пакеты M04 (L1).
+- Ветка: main; Git инициализирован.
+- Текущая цель: C01.1–C01.5 и M02 написаны; общие API/UI-контракты готовы для карточек F, следующий этап — серверная цепочка перевода. Запуска и проверок не было, бизнес-маршруты ещё не реализованы; health каркаса false/null до проб C03.
+- Изменённые файлы: 26 новых — backend/pyproject.toml, app/{__init__,main,config,schemas}.py, app/api/{__init__,routes_health}.py, app/speech/{classifier_prompt.txt,llm_schema.json}; frontend/{package.json,package-lock.json,tsconfig.json,vite.config.ts,index.html}, src/{main.tsx,App.tsx,shell.css,api/types.ts,components/contracts.ts,i18n/keys.ts,i18n/index.ts}; docs/{api,ui-contracts}.md; README.md; .env.example; .gitignore. Обновлены TASKS.md и PROJECT_STATE.md. Полный список — README.md. docs.zip не обновлялся.
+- Блокеры: для F-контрактов нет; F05/F06 ждут только F02, F13 — C05. Последующие решения L3: выдача демо-токенов, политика неполных данных/сильных признаков, при необходимости отдельный ключ запасного LLM и отключение размышлений конкретного сервера. Качество/задержки моделей, доступность ПК на защите и формат сдачи не подтверждены; транзитивный Python lock отсутствует.
+- Следующий шаг: по отдельному поручению выполнить C02 целиком по зафиксированному API.
