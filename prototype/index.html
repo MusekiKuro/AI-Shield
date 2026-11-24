@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Интерактивный макет защиты банковского перевода на синтетических данных.">
+  <title>ИИ-щит · Макет MVP</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <div><strong data-copy="brand">ИИ-щит</strong><small data-copy="brandCaption">Защита переводов</small></div>
+    </div>
+    <nav class="navigation" aria-label="Роли" data-aria="roles">
+      <button type="button" data-view="client" aria-current="page" aria-controls="client-view">
+        <span class="nav-icon nav-client" aria-hidden="true"></span><span data-copy="client">Клиент</span>
+      </button>
+      <button type="button" data-view="trusted" aria-controls="trusted-view">
+        <span class="nav-icon nav-trusted" aria-hidden="true"></span><span data-copy="trusted">Доверенный</span>
+      </button>
+      <button type="button" data-view="operator" aria-controls="operator-view">
+        <span class="nav-icon nav-operator" aria-hidden="true"></span><span data-copy="operator">Оператор</span>
+      </button>
+      <button type="button" data-view="demo" aria-controls="demo-view">
+        <span class="nav-icon nav-demo" aria-hidden="true"></span><span data-copy="demo">Пульт демо</span>
+      </button>
+    </nav>
+    <p class="sidebar-note" data-copy="sandbox">Синтетические данные</p>
+  </aside>
+
+  <main class="workspace">
+    <header class="page-header">
+      <div>
+        <p class="kicker"><span class="indicator" aria-hidden="true"></span><span data-copy="prototype">Макет MVP</span></p>
+        <h1 id="page-title">Проверка перевода</h1>
+        <p id="page-description"></p>
+      </div>
+      <div class="language-switch" role="group" aria-label="Язык" data-aria="language">
+        <button type="button" data-language="ru" aria-label="Русский" aria-pressed="true">RU</button>
+        <button type="button" data-language="kk" aria-label="Қазақша" aria-pressed="false">KK</button>
+      </div>
+    </header>
+
+    <section id="client-view">
+      <div class="balance">
+        <div>
+          <p class="balance-label" data-copy="available">Доступно на демо-счёте</p>
+          <p class="balance-value" id="available-balance">480 000 ₸</p>
+        </div>
+        <div class="balance-right">
+          <span data-copy="reserved">В резерве</span>
+          <strong id="reserved-balance">0 ₸</strong>
+        </div>
+      </div>
+
+      <div class="client-grid">
+        <form class="card transfer-form" id="transfer-form">
+          <h2 data-copy="newTransfer">Новый перевод</h2>
+          <div class="field">
+            <label for="scenario" data-copy="scenario">Сценарий демо</label>
+            <select id="scenario" name="scenario"></select>
+          </div>
+          <div class="transfer-fields">
+            <div class="field">
+              <label for="recipient" data-copy="recipient">Получатель</label>
+              <select id="recipient" name="recipient" required></select>
+            </div>
+            <div class="field">
+              <label for="amount" data-copy="amount">Сумма</label>
+              <div class="amount-input"><input id="amount" name="amount" type="number" inputmode="numeric" min="1" step="1" required><span>₸</span></div>
+            </div>
+          </div>
+          <div class="input-context" id="scenario-context"></div>
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+          <button class="button primary" type="submit" data-copy="checkTransfer">Проверить перевод</button>
+        </form>
+
+        <section class="card result" aria-labelledby="result-title">
+          <h2 id="result-title" data-copy="resultTitle">Результат проверки</h2>
+          <div id="transfer-result" aria-live="polite"></div>
+        </section>
+      </div>
+
+      <section class="card history" aria-labelledby="history-title">
+        <h2 id="history-title" data-copy="history">История переводов</h2>
+        <div id="transfer-history"></div>
+      </section>
+    </section>
+
+    <section id="trusted-view" hidden>
+      <div id="trusted-queue" class="queue"></div>
+    </section>
+
+    <section id="operator-view" hidden>
+      <div id="operator-queue" class="queue"></div>
+    </section>
+
+    <section id="demo-view" hidden>
+      <div class="card demo-control">
+        <div>
+          <h2 data-copy="demoData">Данные макета</h2>
+          <p data-copy="demoDataDescription">Сброс очищает историю текущего сеанса и восстанавливает демо-баланс.</p>
+        </div>
+        <button class="button secondary" id="reset-demo" type="button" data-copy="reset">Сбросить демо</button>
+      </div>
+      <section class="card history" aria-labelledby="journal-title">
+        <h2 id="journal-title" data-copy="journal">Журнал решений</h2>
+        <div id="journal"></div>
+      </section>
+    </section>
+
+    <p class="workspace-note" data-copy="demoNotice">Учебный макет на вымышленных данных. Решения имитируются в браузере.</p>
+  </main>
+</body>
+</html>
